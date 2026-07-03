@@ -9,6 +9,7 @@ valor *= 2
 print(valor)
 """
 numero = 10
+valor = 20
 numero = int(input("Informe o valor: "))
 while numero >=0:
     print(numero)
