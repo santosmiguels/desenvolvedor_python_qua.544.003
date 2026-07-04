@@ -3,7 +3,7 @@ try:
     while True:
         nome = input("informe o nome do usuário: ")
         idade = int(input("Informe a idade do cliente: "))
-        altura = float(input("Informa a altura do cliente: ")).replace(",", ".")
+        altura = float(input("Informa a altura do cliente: ").replace(",", "."))
         if idade >= 12 and altura >= 1.25:
             print(f"A entrada do(a) {nome} está liberada.")
         else:
@@ -12,7 +12,7 @@ try:
         print("1 - Passar novo pagante.")
         print("2 - Encerrar o programa")
 
-        opcao = input("Informe a opcao desejada: ").strip
+        opcao = input("Informe a opcao desejada: ").strip()
 
         match opcao:
             case "1":
