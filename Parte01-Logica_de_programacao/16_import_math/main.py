@@ -7,7 +7,7 @@ try:
         area = math.pi*r**2
         print(f"A área do círculo é: {area:.2f} m2.")
 
-        print("1 - Calcular ára de outro circulo")
+        print("1 - Calcular a área de outro circulo")
         print("2 - Sair do programa")
 
         opcao = input("Informe a sua opção: ").strip()
