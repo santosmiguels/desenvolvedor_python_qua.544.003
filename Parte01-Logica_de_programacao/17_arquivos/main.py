@@ -22,6 +22,7 @@ while True:
             print("Texto gravado com sucesso.")
         case "2":
             nome = input("Digite o nome do arquivo que deseja abrir: ").strip()
+            print({nome})
             try:
                 with open(f"17_arquivos/arquivos/{nome}.txt", "r", encoding="utf-8") as f:
                     nome = f.read()
@@ -31,11 +32,13 @@ while True:
             continue
         case "3":
             novo_texto = input("Digite o texto a ser acrescentado: ").strip()
-            #nova_gravacao = f"{}"
+            nome_abrir = input("Digite o nome do arquivo que deseja abrir para alterar: ").strip()
             try:
-                with open(f"17_arquivos/arquivos/{nome_alterar}.txt", "r", encoding="utf-8") as f:
-                    alterar = f.read()
-                print(alterar)
+                with open(f"17_arquivos/arquivos/{nome_abrir}.txt", "r", encoding="utf-8") as f:
+                    nome_abrir = f.read()
+                print(nome_abrir)
+                print(novo_texto)
+
             except FileNotFoundError:
                 print("Arquivo não encontrado.")
             continue
