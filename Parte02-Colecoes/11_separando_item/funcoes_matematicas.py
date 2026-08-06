@@ -18,8 +18,32 @@ def gerar_pares(n):
 		if i % 2 == 0:
 			#print(i)
 			yield i
-	
+
+#Classe
+class Pessoa:
+	def __init__(self, nome, idade, altura):
+		self.nome = nome
+		self.idade = idade
+		self.altura = altura
+
+	#Método da classe
+	def exibir_dados(self):
+		print(f"Nome: {self.nome}.")
+		print(f"Idade: {self.idade}.")
+		print(f"Altura: {self.altura}.")
+
+
 """
+class Pessoa:
+	nome = "alex"
+	idade = 39
+	cargo = "Programador"
+	email = "alex@gmail.com"
+
+	#Método da classe
+	def apresentar(self):
+		print(f"Olá, menu nome é {self.nome}, tenho {self.idade} anos, trabalho como {self.cargo}, e meu e-mail é {self.email}")
+
 #algoritmo principal
 n = int(input("Entre com o número inteiro positivo: "))
 for par in gerar_pares(n):
