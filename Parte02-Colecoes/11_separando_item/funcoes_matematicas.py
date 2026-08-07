@@ -33,6 +33,18 @@ class Pessoa:
 		print(f"Altura: {self.altura}.")
 
 
+def main():
+	#Instacia a classe Pessoa:
+
+	usuario = Pessoa(nome="", idade=0, altura=0.0)
+	usuario.nome = input("Entre com o nome: ")
+	usuario.idade = int(input("Entre com a idade: "))
+	usuario.altura = float(input("Entre a altura: "))
+
+	usuario.exibir_dados()
+
+
+
 """
 class Pessoa:
 	nome = "alex"

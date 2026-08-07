@@ -1,3 +1,4 @@
+"""
 #Lista ordenada
 nomes = ["Maria", "Antonio", "Luiz", "Jose", "Ana", "pedro"]
 nome = input("Informe o nome a ser separado: ").strip().title()
@@ -14,17 +15,12 @@ if nome in nomes:
 
 else:
     print("Nome não encontrado.")
+"""
 
 import funcoes_matematicas
 
 if __name__ == "__main__":
-    usuario = funcoes_matematicas.Pessoa("", 0, "")
-
-    usuario.nome = input("Entre com o nome: ")
-    usuario.idade = int(input("Entre com a idade: "))
-    usuario.altura = float(input("Entre a altura: "))
-
-    usuario.exibir_dados()
+    funcoes_matematicas.main()
 
 """
 

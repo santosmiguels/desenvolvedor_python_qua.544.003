@@ -9,7 +9,10 @@ usuario = {
 
 chave = input("Informe o nome da chave: ").strip().lower()
 
-#TODO - verificar se a chave existe
-usuario['chave'] = input(f"Entre com a {usuario.get('idade')}: ").strip()
+if chave in usuario:
+    usuario[chave] = input(f"Entre com o novo valor para {chave}.").strip()
 
-usuario['idade']
+    for chave, valor in usuario.items():
+        print(f"{chave.capitalize()}: {valor}")
+else:
+    print("Chave não encontrada.")
