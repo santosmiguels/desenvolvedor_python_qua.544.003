@@ -55,7 +55,7 @@ while True:
                     print("alterado com sucesso")
 
                 else:
-                    print("Usario não encontrado.1")
+                    print("Usario não encontrado.")
             continue
         case "4":
             nome = input("Informe o nome a ser deletado: ").strip().title()
@@ -71,21 +71,3 @@ while True:
         case _:
             print("Opção inválida.")
             continue
-
-"""
-#print(usuarios)
-for usuario in usuarios:
-    for chave, valor in usuario.items():
-        print(f"{chave.capitalize()}: {valor}")
-    print(f"{'-'*40}")
-
-chave = input("Informe o nome da chave: ").strip().lower()
-
-if chave in usuario:
-    usuario[chave] = input(f"Entre com o novo valor para {chave}.").strip()
-
-    for chave, valor in usuario.items():
-        print(f"{chave.capitalize()}: {valor}")
-else:
-    print("Chave não encontrada.")
-"""

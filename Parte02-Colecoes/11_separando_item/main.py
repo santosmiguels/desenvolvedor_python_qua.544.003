@@ -23,6 +23,20 @@ if __name__ == "__main__":
     funcoes_matematicas.main()
 
 """
+Pessoa:
+nome
+CPF
+
+
+pessoa física:
+nome_fantasia
+CNPJ
+
+Comun:
+end
+cep
+telefone
+e-mail
 
 nomes.sort()
 nomes.sort(reverse=True)

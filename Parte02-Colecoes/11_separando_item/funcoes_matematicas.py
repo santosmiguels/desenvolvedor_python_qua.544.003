@@ -29,8 +29,8 @@ class Pessoa:
 	#Método da classe
 	def exibir_dados(self):
 		print(f"Nome: {self.nome}.")
-		print(f"Idade: {self.idade}.")
-		print(f"Altura: {self.altura}.")
+		print(f"Idade: {self.idade} anos.")
+		print(f"Altura: {self.altura} metros.")
 
 
 def main():
