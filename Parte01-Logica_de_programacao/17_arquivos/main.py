@@ -15,9 +15,9 @@ while True:
     match opcao:
         case "1":
             novo_texto = input("Digite o seu texto: ")
-            nome_aquivo = input("Digite o nome do arquivo se a extenção: ").strip()
+            nome_arquivo = input("Digite o nome do arquivo se a extenção: ").strip()
             #Grava novo arquivo:
-            with open(f"17_arquivos/arquivos/{nome_aquivo}.txt", "w", encoding="utf-8") as f:
+            with open(f"17_arquivos/arquivos/{nome_arquivo}.txt", "w", encoding="utf-8") as f:
                 f.write(novo_texto)
             print("Texto gravado com sucesso.")
         case "2":
