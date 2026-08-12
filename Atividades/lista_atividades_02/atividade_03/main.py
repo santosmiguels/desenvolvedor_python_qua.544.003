@@ -67,16 +67,16 @@ while True:
         break
 
 for notas in notas_dos_alunos:
-    print(notas)
-    for estudante in notas:
-        print("*"*40)
-        print(notas['aluno'])
-        print(notas['nota1'])
-        print(notas['nota2'])
-        print(notas['nota3'])
-        print(notas['media'])
-        print(notas['situacao'])
-        print("*"*40)
+    #print(notas)
+    #for estudante in notas:
+    print("*"*40)
+    print(f"Aluno: {notas['aluno']}")
+    print(f"Nota1: {notas['nota1']}")
+    print(f"nota2: {notas['nota2']}")
+    print(f"nota3: {notas['nota3']}")
+    print(f"Média: {notas['media']}")
+    print(f"situação: {notas['situacao']}")
+    #print("*"*40)
 
     """
     #Gerar umjson.
