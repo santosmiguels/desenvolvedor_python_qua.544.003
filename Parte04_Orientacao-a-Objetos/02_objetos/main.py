@@ -8,8 +8,8 @@ def limpar():
 limpar()
 
 def main():
-    homem = Pessoa(nome="", idade=0, email= "", telefone="")
-    mulher = Pessoa(nome="", idade=0, email="", telefone="")
+    homem=Pessoa(nome="",idade=0,email="",telefone="")
+    mulher=Pessoa(nome="",idade=0,email="",telefone="")
 
     homem.nome = input("Entre com o nome do homem: ").strip().title()
     homem.idade = int(input("Entre com a idade do homem: "))
