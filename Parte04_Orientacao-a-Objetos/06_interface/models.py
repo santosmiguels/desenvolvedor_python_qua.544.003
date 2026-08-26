@@ -70,8 +70,8 @@ class Conta(Iconta):
         print(f"Nome do titular da conta: {self.__titular}")
         print(f"CPF do titular da conta: {self.__cpf}")
         print(f"Agência da conta: {self.__agencia}")
-        print(f"Número da conta: {self.n_conta}")
-        print(f"Saldo da conta: {self.saldo}")
+        print(f"Número da conta: {self.__n_conta}")
+        print(f"Saldo da conta: {self.__saldo}")
 
     def fazer_deposito(self, valor):
         self.__saldo += valor
