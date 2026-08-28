@@ -2,7 +2,7 @@ class Motor:
     def __init__(self, potencia):
         self.__potencia = potencia
 
-    @property
+    @pro
     def potencia(self):
         return self.__potencia
 
