@@ -2,9 +2,7 @@ import models
 
 def main():
     pedido = models.Pedido(valor1=0.0,valor2=0.0)
-
     models.limpar()
-
     models.Pedido.valor1 = float(input("Informe a valor 1: ").replace(",", "."))
     models.Pedido.valor2 = float(input("Informe o valor 2: ").replace(",","."))
 
@@ -13,6 +11,8 @@ def main():
     print("3 - Multiplicar.")
     print("4 - Dividir.")
 
+    print(models.Pedido.valor1)
+    print(models.Pedido.valor2)
     operador = input("Informe a operação desejada: ").strip()
 
     print(pedido.calcular_total(operador=operador))
