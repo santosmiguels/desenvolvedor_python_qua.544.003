@@ -22,7 +22,7 @@ def main():
     empresa.valor_mercado = float(input("Entre com valo de mercado da empresa: ").replace(",","."))
     empresa.email = input("entre com o e-mail da empresa: ").strip()
     empresa.telefone = input("Entre com o telefone da empresa: ").strip()
-
+    limpar()
     print(usuario)
     print(empresa)
 

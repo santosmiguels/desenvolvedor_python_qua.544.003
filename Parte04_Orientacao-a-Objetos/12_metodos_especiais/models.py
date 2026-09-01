@@ -20,8 +20,9 @@ class Pessoa:
     def __float__(self):
         return self.altura
 
-    del __del__(self):
-    print(f"Objeto {self} destruído com sucesso.")
-
+    #del __del__(self):
+    #print(f"Objeto {self} destruído com sucesso.")
+    def __delete__(self, instance):
+        print(f"Objeto {self} destruído com sucesso.")
     
 
