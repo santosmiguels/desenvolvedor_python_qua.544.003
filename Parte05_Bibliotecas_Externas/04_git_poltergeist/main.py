@@ -21,6 +21,7 @@ def main():
     auto.press("enter")
     auto.write("git push")
     auto.press("enter")
+    
     """
     auto.PAUSE = 0.75
     auto.press("win")
