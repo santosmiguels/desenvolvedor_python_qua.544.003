@@ -17,11 +17,11 @@ def main():
     auto.press("enter")
     auto.write("git add .")
     auto.press("enter")
-    auto.write(f'git commit -m "{hoje()}')
+    auto.write(f'git commit -m "{hoje()}"')
     auto.press("enter")
     auto.write("git push")
     auto.press("enter")
-    
+
     """
     auto.PAUSE = 0.75
     auto.press("win")
