@@ -1,0 +1,3 @@
+#Não levar os arquivos listados para o GITHUB:
+*.spec
+build
