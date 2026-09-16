@@ -29,8 +29,8 @@ def commitar():
         auto.write(f'git commit -m "Commit do dia {hoje}"')
         auto.press("enter")
         auto.write("git push")
-        auto.sleep(4)
         auto.press("enter")
+        auto.sleep(4)
         auto.press("exit")
         auto.press("enter")
     #else:
