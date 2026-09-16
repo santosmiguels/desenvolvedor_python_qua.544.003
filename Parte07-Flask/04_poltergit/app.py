@@ -31,8 +31,8 @@ def commitar():
         auto.write("git push")
         auto.press("enter")
         auto.sleep(4)
-        auto.press("exit")
-        auto.press("enter")
+        #auto.press("exit")
+        #auto.press("enter")
     #else:
     #    mensagem = "Repositório inválido."
     #return render_template("index.html", msg = mensagem)   
