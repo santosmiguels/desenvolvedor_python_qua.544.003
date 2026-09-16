@@ -26,13 +26,13 @@ def commitar():
         auto.press("enter")
         auto.write("git add .")
         auto.press("enter")
-        auto.write('git commit -m "{{hoje}}')
+        auto.write('git commit -m "{{hoje}}"')
         auto.press("enter")
         auto.write("git push")
         auto.press("enter")
     else:
         mensagem = "Repositório inválido."
-    return render_template("index.html", mensagem = msg)
+    return render_template("index.html", msg = mensagem)
 
 
 
