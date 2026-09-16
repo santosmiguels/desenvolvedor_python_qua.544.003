@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Celtica-book';
+    src: url(../fonts/Celtica-Book.ttf) format('TrueType');
+    font-weight: normal;
+    font-style: normal;
+}
+h1 {
+    font-family: Celtica-book, Arial, Helvetica, sans-serif;
+}
