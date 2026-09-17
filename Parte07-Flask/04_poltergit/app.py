@@ -31,7 +31,7 @@ def commitar():
         auto.write("git push")
         auto.press("enter")
         auto.sleep(4)
-        auto.press("quit")
+        auto.press("exit")
         auto.sleep(2)
         auto.press("enter")
     #else:
