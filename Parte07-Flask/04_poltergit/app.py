@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import pyautogui as auto
 from datetime import date
+import webview
 
 app = Flask(__name__)
 
@@ -13,7 +14,7 @@ def index():
 @app.route("/commitar", methods = ['GET', 'POST'])    
 def commitar():
     hoje =  date.today().strftime("%d/%m/%y")
-    mensagem = None
+    #mensagem = None
     repositorio = None
     if request.method == "POST":
         repositorio = request.form.get("repositorio", "")
@@ -30,9 +31,9 @@ def commitar():
         auto.press("enter")
         auto.write("git push")
         auto.press("enter")
-        auto.sleep(4)
+        #auto.sleep(4)
         auto.press("exit")
-        auto.sleep(2)
+        #auto.sleep(2)
         auto.press("enter")
     #else:
     #    mensagem = "Repositório inválido."
