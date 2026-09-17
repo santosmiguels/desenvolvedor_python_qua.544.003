@@ -1,9 +1,19 @@
+#Importação da bibliotecas do sistema:
 from flask import Flask, render_template, request
 import pyautogui as auto
 from datetime import date
 import webview
+from datetime import date
+import os 
+import sys
 
-app = Flask(__name__)
+#Início:
+if getattr("sys", 'frozen', False):
+    template_folder = os.path.join(sys._MEIPASS, 'templates')
+    static_folder = os.path.join(sys._MEIPASS, 'static')
+    app =Flask(__name__, template_folder=template_folder, static_folder=static_folder)
+else:
+    app = Flask(__name__)
 
 @app.route("/", methods = ['GET', 'POST'])
 def index():
@@ -35,11 +45,14 @@ def commitar():
         auto.press("exit")
         #auto.sleep(2)
         auto.press("enter")
-    #else:
-    #    mensagem = "Repositório inválido."
-    #return render_template("index.html", msg = mensagem)   
-
     return render_template('index.html', datahoje = hoje)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    #app.run(debug=True)
+    window = webview.create_window(
+        title="PolterGit",
+        url=app,
+        width=600,
+        height=300
+    )
+    webview.start()
