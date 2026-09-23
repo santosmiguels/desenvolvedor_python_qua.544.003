@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, send_file
 from datetime import date
 import easyocr
 import io
+from translate import Translator
 
 app = Flask(__name__)
 
@@ -19,7 +20,7 @@ def extrair_texto():
     render = easyocr.Reader(['en', 'pt'], gpu = False)
     result = render.readtext(imagem.read())
     texto_extraido = ' '.join([res[1] for res in result])
-    return render_template("extracao.html", text = texto_extraido)
+    return render_template("extracao.html", texto = texto_extraido)
 
 @app.route("/exportarTexto", methods = ['POST'])
 def exportar_texto():
@@ -33,6 +34,15 @@ def exportar_texto():
             download_name='texto_extraido.txt'
         )
     return render_template("exportar_sucesso.html")
+
+@app.route("/traducao", methods=["POST"])
+def traduzir():
+    tradutor = Translator(to_lang="pt")
+    if request.method == "POST":
+        texto = request.form.get("texto", "")
+        texto_traduzido = tradutor.translate(texto)
+        return render_template("extracao.html", texto=texto_traduzido)
+    return render_template("extracao.html", texto="")
 
 if __name__ == "__main__":
     app.run(debug=True)
